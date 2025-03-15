@@ -1,6 +1,7 @@
 import CartItem from "./CartItem.jsx";
 
 export default function Cart({ cart }) {
+  console.log(cart);
   return (
     <section>
       <h2>Cart</h2>
@@ -9,6 +10,6 @@ export default function Cart({ cart }) {
           <CartItem key={cartItem.id} cartItem={cartItem} />
         ))}
       </ul>
-      </section>
+    </section>
   );
 }
