@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20ch, 1fr));
+  list-style: none;
+}
+
+/* li{
+    display: grid;
+} */
+
+.cartItem{
+    display:flex
+}
