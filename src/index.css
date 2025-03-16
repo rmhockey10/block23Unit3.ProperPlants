@@ -6,18 +6,48 @@
 
 main {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 4fr 1fr;
+  margin: 0.5rem;
 }
+
 ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20ch, 1fr));
   list-style: none;
 }
 
-/* li{
-    display: grid;
-} */
+.cartListItem {
+  margin: 0.5rem 0;
+  padding-bottom: 0.4rem;
+  border-bottom: solid rgb(227, 220, 220);
+  border-width: 0.01rem;
+}
 
-.cartItem{
-    display:flex
+.PlantsImage {
+  font-size: 4rem;
+  margin: 0.1rem;
+}
+
+.Cart {
+  margin: 0.1rem;
+}
+
+.PlantsListItem {
+  border-color: rgb(162, 154, 154);
+  border-style: solid;
+  border-width: 0.01rem;
+  margin: 0.1rem;
+}
+
+.cartItem {
+  display: flex;
+}
+
+.cartButton {
+  width: 4rem;
+  margin: 0 1rem;
+}
+
+.cartImage {
+  margin: 0 0.5rem;
 }
