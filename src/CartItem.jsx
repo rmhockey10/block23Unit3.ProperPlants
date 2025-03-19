@@ -1,6 +1,4 @@
-export default function CartItem({ cartItem, addToCart, cart }) {
-  const localCart = cartItem.quantity;
-  console.log(localCart);
+export default function CartItem({ cartItem, addQuantity, removeQuantity }) {
   return (
     <li className="cartListItem">
       <section className="cartItem">
@@ -8,12 +6,19 @@ export default function CartItem({ cartItem, addToCart, cart }) {
         <p>{cartItem.name}</p>
       </section>
       <section className="cartItem">
-        <button className="cartButton">-</button>
+        <button
+          className="cartButton"
+          onClick={() => {
+            removeQuantity(cartItem);
+          }}
+        >
+          -
+        </button>
         <p>{cartItem.quantity}</p>
         <button
           className="cartButton"
           onClick={() => {
-            addToCart([...cart, { quantity: cartItem.quantity + 1 }]);
+            addQuantity(cartItem);
           }}
         >
           +
@@ -22,10 +27,3 @@ export default function CartItem({ cartItem, addToCart, cart }) {
     </li>
   );
 }
-
-// {/* <button onClick={() => {
-//     addQuantity([
-//       ...cart, cart.quantity + 1
-//     ]);
-//   }}
-//   ></button> */}

@@ -1,6 +1,6 @@
 import Plant from "./Plant.jsx";
 
-export default function Plants({ addToCart, plants, cart }) {
+export default function Plants({ addQuantity, plants, cart }) {
   return (
     <section className="Plants">
       <h2>Plants</h2>
@@ -9,7 +9,7 @@ export default function Plants({ addToCart, plants, cart }) {
           <Plant
             key={plant.id}
             plant={plant}
-            addToCart={addToCart}
+            addQuantity={addQuantity}
             cart={cart}
           />
         ))}
